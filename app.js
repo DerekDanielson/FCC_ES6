@@ -101,9 +101,25 @@ const { johnDoe: { age, email }} = user;
 const { johnDoe: [ age: userAge, email: userEmail ]} = user;
 
 
-// Use Destructuring Assignment to assign variables from arrays
+// Use Destructuring Assignment to assign variables from arrays *******************************
+//Spread operator unpacks all contents of an array into a comma-separated list
+//Cannot pick or choose which elements you wnat to assign to variables
+// Change array order:
+const a = 8, b = 3;
+[a, b] = [b, a]; // 3, 8
 
 
+// Destructuring Assignment with the Rest Parameter to reassign array elements ****************
+//Destructuring Assignment wuth Rest, can be used to collect the rest of the elements into a
+//separate array
+const [a, b, ...arr] = [1, 2, 3, 4, 5, 6];
+console.log(a, b);  // 1, 2
+console.log(arr);   // [3, 4, 5, 6]
+//Rest element only works correctly as the last variable in the list
+
+
+// Destructuring Assignment to pass an object as a function's parameters ***********************
+ 
 
 
 
